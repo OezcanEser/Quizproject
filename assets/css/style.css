@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+  position: relative;
+  background-color: wheat;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+button {
+  background-color: #2e2e2e;
+  border-style: none;
+  border-radius: 15px;
+  margin: 0% 2.5% 7.5%;
+  color: honeydew;
+  width: 10vw;
+  height: 7.5vh;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=style.css.map */
