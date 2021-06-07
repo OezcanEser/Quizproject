@@ -62,22 +62,34 @@ let data = [
     }
 ]
 
+// create some text
+let body = document.querySelector("body")
+let h1 = document.createElement("h1")
+let text = document.createTextNode("Let's play a quiz")
+body.appendChild(h1)
+h1.appendChild(text)
+
+// create scoretable
+let score = 0
+let scorePoints = document.createElement("output")
+body.appendChild(scorePoints)
+
 // create quiz
 data.forEach(questions => {
 
     // create our elemets
     let section = document.createElement("section")
     let img = document.createElement("img")
-    let h1 = document.createElement("h1")
+    let h2 = document.createElement("h2")
 
     // package our elemets
     document.querySelector("body").appendChild(section)
     section.appendChild(img)
-    section.appendChild(h1)
+    section.appendChild(h2)
 
     // select object index
     img.src = questions.url
-    h1.innerHTML = questions.question
+    h2.innerHTML = questions.question
 
     // + create new var
     let choices = questions.choice
@@ -98,9 +110,13 @@ data.forEach(questions => {
         button.addEventListener('click', () => {
             if (choice == questions.answer) {
                 button.style.backgroundColor = "green"
+                score++
             } else {
                 button.style.backgroundColor = "red"
+                score--
             }
+            //show points
+            scorePoints.innerHTML = "Your score: " + score
         })
     })
 })

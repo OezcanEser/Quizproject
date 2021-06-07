@@ -5,7 +5,18 @@ body {
 }
 
 h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
     font-size: 1.8rem;
+}
+
+output {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 2rem;
 }
 
 button {
